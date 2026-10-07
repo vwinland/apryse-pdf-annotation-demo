@@ -2,27 +2,39 @@
 
 Companion project for the article. Requires Node.js 22.12+ and npm.
 
+## Run the sample
+
 1. Clone the repository and open its folder:
 
-```sh
-git clone <REPOSITORY_URL> apryse-pdf-annotation-demo
-cd apryse-pdf-annotation-demo
-```
+   ```sh
+   git clone https://github.com/vwinland/apryse-pdf-annotation-demo.git
+   cd apryse-pdf-annotation-demo
+   ```
 
-Replace `<REPOSITORY_URL>` with the published repository URL. This repository is currently local; that URL is not available yet.
-2. Run `npm ci`.
+2. Install the dependencies using the versions in `package-lock.json`:
+
+   ```sh
+   npm ci
+   ```
+
 3. Copy the SDK runtime files (macOS/Linux):
 
-```sh
-mkdir -p public/lib/webviewer
-cp -R node_modules/@pdftron/webviewer/public/. public/lib/webviewer/
-```
+   ```sh
+   mkdir -p public/lib/webviewer
+   cp -R node_modules/@pdftron/webviewer/public/. public/lib/webviewer/
+   ```
 
-For Windows or automated copying, see https://docs.apryse.com/web/get-started/copy-assets.
+   For Windows or automated copying, see [Apryse's asset setup guide](https://docs.apryse.com/web/get-started/copy-assets).
 
-4. In main.js, replace YOUR_TRIAL_KEY with your Apryse trial key.
-5. Run `npm run dev` and open the printed URL.
-6. Highlight text and add a note. Finish the note, click Save annotations, wait for Saved in this browser, then refresh.
+4. Open `main.js` and replace `YOUR_TRIAL_KEY` with your Apryse trial key.
+
+5. Start the development server and open the local URL it prints:
+
+   ```sh
+   npm run dev
+   ```
+
+6. Highlight text and add a note. Finish the note in its editor, then click **Save annotations** above the viewer. Wait for **Saved in this browser.** and refresh. Your saved annotations should return.
 
 index.html is the page; main.js initializes WebViewer and saves/restores XFDF annotations. public/documents/review.pdf is a non-sensitive two-page sample. package-lock.json pins the dependencies used in the verified app. SDK runtime files are copied after installation, not committed to this repository.
 
