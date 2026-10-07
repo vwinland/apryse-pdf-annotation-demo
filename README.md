@@ -34,13 +34,13 @@ Companion project for the article. Requires Node.js 22.12+ and npm.
    npm run dev
    ```
 
-6. Highlight text and add a note. Finish the note in its editor, then click **Save annotations** above the viewer. Wait for **Saved in this browser.** and refresh. Your saved annotations should return.
+6. Highlight text and leave a comment. Finish the comment in its editor, then click **Save annotations** above the viewer. Wait for **Saved in this browser.** and refresh. Your saved annotations should return. To check deletion, delete an annotation, save, and refresh; the deleted annotation should stay removed.
 
 index.html is the page; main.js initializes WebViewer and saves/restores XFDF annotations. public/documents/review.pdf is a non-sensitive two-page sample. package-lock.json pins the dependencies used in the verified app. SDK runtime files are copied after installation, not committed to this repository.
 
 Storage is local to the browser profile and origin, including port. Save after each change. Annotations do not modify the original PDF or sync across devices. Clearing browser storage removes them. Change storageKey when replacing the PDF.
 
-Verified in the original local app: PDF loading, highlighting, notes, page navigation, saved highlight/note restoration and edited-note restoration after refresh. Deletion, autosave, backend persistence, concurrent edits and storage failure are unverified.
+Verified in the original local app: PDF loading, highlighting, comments, page navigation, saved highlight/comment restoration and edited-comment restoration after refresh. Deletion persistence was also verified by the author. Autosave, backend persistence, concurrent edits and storage failure are unverified.
 
 ## Project structure
 
