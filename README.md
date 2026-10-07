@@ -1,8 +1,15 @@
-# Apryse PDF review sample
+# Apryse PDF viewing and annotation demo
 
 Companion project for the article. Requires Node.js 22.12+ and npm.
 
-1. Extract the ZIP and open a terminal in the pdf-review folder.
+1. Clone the repository and open its folder:
+
+```sh
+git clone <REPOSITORY_URL> apryse-pdf-annotation-demo
+cd apryse-pdf-annotation-demo
+```
+
+Replace `<REPOSITORY_URL>` with the published repository URL. This repository is currently local; that URL is not available yet.
 2. Run `npm ci`.
 3. Copy the SDK runtime files (macOS/Linux):
 
@@ -17,7 +24,7 @@ For Windows or automated copying, see https://docs.apryse.com/web/get-started/co
 5. Run `npm run dev` and open the printed URL.
 6. Highlight text and add a note. Finish the note, click Save annotations, wait for Saved in this browser, then refresh.
 
-index.html is the page; main.js initializes WebViewer and saves/restores XFDF annotations. public/documents/review.pdf is a non-sensitive two-page sample. package-lock.json pins the dependencies used in the verified app. SDK runtime files are copied after installation, not included in this ZIP.
+index.html is the page; main.js initializes WebViewer and saves/restores XFDF annotations. public/documents/review.pdf is a non-sensitive two-page sample. package-lock.json pins the dependencies used in the verified app. SDK runtime files are copied after installation, not committed to this repository.
 
 Storage is local to the browser profile and origin, including port. Save after each change. Annotations do not modify the original PDF or sync across devices. Clearing browser storage removes them. Change storageKey when replacing the PDF.
 
@@ -26,7 +33,7 @@ Verified in the original local app: PDF loading, highlighting, notes, page navig
 ## Project structure
 
 ```text
-apryse-pdf-review/
+apryse-pdf-annotation-demo/
 ├── index.html                 Page containing the viewer
 ├── main.js                    Viewer setup and annotation persistence
 ├── package.json               Dependencies and development command
